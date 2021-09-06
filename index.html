@@ -13,7 +13,7 @@
     />
   </head>
   <body>
-    <canvas class="whiteboard"></canvas>
+    <canvas class="whiteboard" id="canvas"></canvas>
 
     <div class="stroke"></div>
     <div class="toolbox" id="mainBox">
@@ -36,34 +36,6 @@
       >
       <i class="ri-download-line icon" id="save"
         ><div class="tooltip">save</div></i
-      >
-    </div>
-    <div class="toolbox slide-out" id="pencilBox">
-      <i class="ri-arrow-down-s-line icon" id="pencilClose"
-        ><div class="tooltip">close</div></i
-      >
-      <i
-        class="ri-checkbox-blank-circle-fill icon"
-        style="color: black"
-        id="colorPicker"
-        ><div class="tooltip">color</div>
-        <input oninput="changeColor(this)" type="color" class="color-picker"
-      /></i>
-      <i class="ri-pencil-fill red icon" style="color: #e10600"
-        ><div class="tooltip">red</div></i
-      >
-      <i class="ri-pencil-fill blue icon" style="color: #0827f5"
-        ><div class="tooltip">blue</div></i
-      >
-      <i class="ri-pencil-fill green icon" style="color: #19a15f"
-        ><div class="tooltip">green</div></i
-      >
-      <i class="ri-pencil-fill yellow icon" style="color: #ffce43"
-        ><div class="tooltip">yellow</div></i
-      >
-      <i class="ri-separator icon" id="line"><div class="tooltip">line</div></i>
-      <i class="ri-eraser-fill icon" id="eraser"
-        ><div class="tooltip">erase</div></i
       >
     </div>
     <script src="main.js"></script>
