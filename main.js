@@ -10,6 +10,12 @@ let draw_color = "black";
 let draw_width = 2;
 let is_drawing = false;
 
+let undo_array = [];
+let redo_array = [];
+let index = -1;
+let totalLength = -1;
+let redo_index = 0;
+
 canvas.addEventListener("touchstart", start, false);
 canvas.addEventListener("touchmove", draw, false);
 canvas.addEventListener("mousedown", start, false);
@@ -51,4 +57,11 @@ function stop(event) {
     is_drawing = false;
   }
   event.preventDefault();
+
+  if(event.type != 'mouseout')
+  {
+    undo_array.push(context.getImageData(0, 0, canvas.width, canvas.height));
+    index++;
+    totalLength++; 
+  }
 }
